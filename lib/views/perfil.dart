@@ -9,6 +9,22 @@ class Perfil extends StatefulWidget {
 class _PerfilState extends State<Perfil> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.grey,
+          title: const Text("Pefil"),
+          actions: [
+            IconButton(
+                onPressed: () async {
+                  Navigator.popAndPushNamed(context, Home.routename);
+                },
+                icon: Icon(Icons.logout))
+          ],
+          centerTitle: true,
+        ),
+        body: Container(),
+      ),
+    );
   }
 }

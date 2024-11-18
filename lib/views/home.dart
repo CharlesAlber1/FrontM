@@ -57,9 +57,7 @@ class _HomeState extends State<Home> {
           ],
           centerTitle: true,
         ),
-        body: const Center(
-          child: Text('Selecciona una opción en el menú'),
-        ),
+        body: const Center(),
       ),
     );
   }

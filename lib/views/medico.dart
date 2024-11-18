@@ -14,7 +14,7 @@ class Medico extends StatefulWidget {
 class _MedicoState extends State<Medico> {
   Future<List<dynamic>> fetchMedicos() async {
     final response = await http.get(Uri.parse(
-        'http://10.0.2.2:8080/api/medicos?especialidadId=${widget.especialidadId}'));
+        'http://10.0.2.2:8080/api/medicos/especialidad/${widget.especialidadId}'));
     if (response.statusCode == 200) {
       return json.decode(response.body);
     } else {
